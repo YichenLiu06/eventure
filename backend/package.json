@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "initdb": "node --experimental-sqlite backend/db/initdb.js"
+    "initdb": "node --experimental-sqlite db/initdb.js",
+    "start" : "node --watch --experimental-sqlite app.js"
   },
   "author": "",
   "license": "ISC",
