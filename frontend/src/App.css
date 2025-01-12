@@ -1,0 +1,279 @@
+@keyframes typing{
+
+  from {width: 0;}
+  to {width: 100%;}
+
+}
+
+html, body{
+
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Geist";
+
+}
+
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Geist";
+}
+
+#main{
+
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+}
+
+#mainTitle{
+
+  margin-left: 6vmin;
+  margin-bottom: 1vmin;
+  font-size: 15vmin;
+
+}
+
+.button{
+
+  margin-left: 6vmin;
+  width: 20vw;
+  height: 10vh;
+  background-color: rgb(207, 33, 41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2vmin;
+  font-size: 5vmin;
+
+}
+
+.button:hover{
+
+  background-color: rgb(165, 1, 33);
+  border: rgb(207, 33, 41) solid 5px;
+  box-sizing: border-box;
+
+}
+
+#signInWindow{
+
+  z-index: 1;
+  background-color: white;
+  width: 25vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2vmin;
+  position: relative;
+
+}
+
+#signIn{
+
+  width: 10vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: grey solid 1px;
+
+}
+
+#xSignIn{
+
+  position: absolute;
+  right: 1vmin;
+  top: 1vmin;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4vmin;
+
+}
+
+.overlay{
+
+  display: flex;
+  align-items: center;
+   justify-content: center; 
+   z-index: 1; 
+   position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%; 
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+#eventButton{
+
+  position: absolute; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  top: 2vmin; 
+  right: 2vmin; 
+  width: 16vw; height: 8vh; background-color: yellow; 
+  border: 1vmin solid rgb(180, 138, 34);
+  font-size: 3vmin;
+
+}
+
+#eventButton:hover{
+  background-color: rgb(255, 186, 0);
+}
+
+#desc{
+
+  font-size: 5vmin;
+  margin-left: 6vmin;
+  margin-top: 0;
+  overflow: hidden;
+
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.login-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.login-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.login-field {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.logout-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.event-list li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.map-container {
+  flex: 1;
+  width: 100%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.create-event-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.create-event-button:hover {
+  background-color: #0056b3;
+}

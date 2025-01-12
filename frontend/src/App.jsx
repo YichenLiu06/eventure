@@ -1,30 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import MapPanel from './components/Map/Map'
-import CreateEventForm from './components/CreateEventForm/CreateEventForm'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
 
-function App() {
-  
-  const [latitude, setLatitude] = useState(parseFloat(localStorage.getItem('latitude'))||0)
-  const [longitude, setLongitude] = useState(parseFloat(localStorage.getItem('longitude'))||0)
-  
-  function handleClick (event){
-    setLatitude(event.detail.latLng.lat)
-    setLongitude(event.detail.latLng.lng)
-    console.log(event.detail.latLng.lat)
-    window.localStorage.setItem("latitude", event.detail.latLng.lat)
-    window.localStorage.setItem("longitude",event.detail.latLng.lng)
-  }
-  console.log(parseFloat(window.localStorage.getItem('latitude')))
+export default function App() {
   return (
-    <>
-      <CreateEventForm author_id={1} latitude={latitude} longitude={longitude}/>
-      <MapPanel handleClick={handleClick} latitude = {window.localStorage.getItem('latitude')|latitude} longitude = {window.localStorage.getItem('longitude')|longitude}/>
-    </>
-    
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<Login />}/>
+      </Routes>
+    </Router>
+  );
 }
-
-export default App

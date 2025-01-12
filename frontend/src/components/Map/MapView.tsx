@@ -15,24 +15,11 @@ function parseISOString(s) {
     return new Date(Date.UTC(b[0], --b[1], b[2], b[3], b[4], b[5], b[6]));
 }
 
-function MapPanel({handleClick, latitude, longitude}){
+function MapView({handleClick, latitude, longitude, events}){
     console.log(latitude)
-    const [events, setEvents] = useState([])
-
-    useEffect(() => {
-        async function populateEvents(){
-            const response = await fetch("http://localhost:5000/events", {
-                method: "GET",
-            })
-            const data = await response.json()
-            console.log(data)
-            setEvents(data)
-        }
-        populateEvents()
-    }, [])
 
     return (
-        <div className='h-screen w-screen'>
+        <div className='w-full h-full'>
             <APIProvider apiKey={"AIzaSyBHnC6z-IBbA_K0xhIRsrSOKcXPEkugvGs"} onLoad={() => console.log('Maps API has loaded.')}>
                 <Map
                     defaultZoom={13}
@@ -53,4 +40,4 @@ function MapPanel({handleClick, latitude, longitude}){
     )
 }
 
-export default MapPanel
+export default MapView

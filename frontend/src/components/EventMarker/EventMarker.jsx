@@ -27,11 +27,11 @@ function EventMarker({position, timestamp, title, description}){
     return (
         <>
             <AdvancedMarker ref={markerRef} position={position} title = {title} anchorPoint={AdvancedMarkerAnchorPoint.BOTTOM_CENTER} onClick={handleMarkerClick}/>
-            {infoWindowShown && (<InfoWindow className="max-w-52" anchor={marker} headerContent = {<h1 className='font-bold'>{title}</h1>} onClose={handleClose}>
-                <div className='whitespace-pre-line'>{timestamp.toLocaleDateString(undefined, timeDisplayOptions) + "\n " + timestamp.getHours()+":"+displayMinutes(timestamp.getMinutes())}
+            {infoWindowShown && (<InfoWindow className="max-w-52" anchor={marker} headerContent = {<h1 className='font-bold text-lg text-black'>{title}</h1>} onClose={handleClose}>
+                <div className='whitespace-pre-line text-black'>{timestamp.toLocaleDateString(undefined, timeDisplayOptions) + "\n " + timestamp.getHours()+":"+displayMinutes(timestamp.getMinutes())}
 
                 </div>
-                <p className='text-xs'>{description}</p>
+                <p className='text-xs text-black'>{description}</p>
                 <button className='p-2 bg-red-700 rounded-xl w-fit'>Sign Up</button>
                 
             </InfoWindow>
