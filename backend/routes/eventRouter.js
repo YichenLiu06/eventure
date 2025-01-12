@@ -1,10 +1,12 @@
 const express = require('express')
 const database = require('../db/db.js')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const app = express()
 const eventRouter = express.Router()
 
+eventRouter.use(cors())
 eventRouter.use(bodyParser.urlencoded({ extended: true }));
 eventRouter.use(bodyParser.json());
 
