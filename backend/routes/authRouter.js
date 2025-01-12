@@ -1,9 +1,6 @@
 const express = require('express');
 const { createUserWithEmailAndPassword, signInWithEmailAndPassword } = require('firebase/auth');
 const { auth } = require('../auth/firebase.js');
-/*
-const { verifyToken } = require('../auth/middleware.js');
-*/
 
 const authRouter = express.Router();
 
@@ -31,9 +28,4 @@ authRouter.post('/login', async (req, res) => {
     }
 });
 
-/*
-authRouter.get('/protected', verifyToken, (req, res) => {
-    res.send(`Welcome, authenticated user with UID: ${req.user.uid}`);
-});
-*/
 module.exports = authRouter;
