@@ -1,3 +1,6 @@
+Deltahacks 2025
+https://devpost.com/software/eventure-pocs6g
+
 How to Demo It;
 
 git clone the repo into an empty directory
